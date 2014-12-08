@@ -17,13 +17,16 @@ RUN \
   curl https://storage.googleapis.com/golang/go1.3.3.linux-amd64.tar.gz | tar xvzf - -C /go --strip-components=1
 
 # Set environment variables.
+RUN \
+  mkdir -p /golib && \
+  mkdir -p /projects/golang
 ENV GOROOT /go
 ENV GOPATH /golib
 ENV GOBIN /gobin
-ENV PATH $GOROOT/bin:$GOPATH/bin:$GOBIN:$PATH
+ENV PATH $GOROOT/bin:$GOBIN:$PATH
 
 # Define working directory.
-WORKDIR /gopath
+WORKDIR /projects/golang
 
 # Define default command.
 CMD ["bash"]
