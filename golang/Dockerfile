@@ -1,7 +1,7 @@
 #
 # My Dockerfile - golang
 #
-# https://github.com/hyper-carrot/dockerfile/golang
+# https://github.com/hyper-carrot/mydockerfiles/golang
 #
  
 FROM centos:latest
