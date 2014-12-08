@@ -19,9 +19,10 @@ RUN \
 # Set environment variables.
 RUN \
   mkdir -p /golib && \
-  mkdir -p /projects/golang
+  mkdir -p /projects/golang && \
+  mkdir -p /gobin
 ENV GOROOT /go
-ENV GOPATH /golib
+ENV GOPATH /golib:/projects/golang
 ENV GOBIN /gobin
 ENV PATH $GOROOT/bin:$GOBIN:$PATH
 
