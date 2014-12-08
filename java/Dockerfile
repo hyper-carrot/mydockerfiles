@@ -12,7 +12,7 @@ RUN yum -q -y install wget
 RUN yum -q -y install tar
 RUN yum -q -y install gzip
 
-# Install Golang
+# Install Java
 RUN \
   mkdir -p /jdk1.7.0 && \
   wget -qO- --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u72-b14/jdk-7u72-linux-x64.tar.gz | tar xvzf - -C /jdk1.7.0 --strip-components=1
