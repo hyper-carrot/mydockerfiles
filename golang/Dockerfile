@@ -1,5 +1,5 @@
 #
-# My Dockerfile - golang
+# My Dockerfile - Golang
 #
 # https://github.com/hyper-carrot/mydockerfiles/golang
 #
@@ -11,7 +11,7 @@ MAINTAINER Robert Hao <hypermind.cn@gmail.com>
 RUN yum -q -y install tar
 RUN yum -q -y install gzip
 
-# Install Golang
+# Install Golang1.3.3
 RUN \
   mkdir -p /go && \
   curl https://storage.googleapis.com/golang/go1.3.3.linux-amd64.tar.gz | tar xvzf - -C /go --strip-components=1
