@@ -7,6 +7,12 @@
 FROM centos:latest
 MAINTAINER Robert Hao <hypermind.cn@gmail.com>
 
+# Set timestamp
+ENV REFRESHED_AT 2015-01-19
+
+# Update them
+RUN  yum -q -y upgrade
+
 # Install base tools
 RUN yum -q -y install wget
 RUN yum -q -y install tar

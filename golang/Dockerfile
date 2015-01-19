@@ -7,11 +7,17 @@
 FROM centos:latest
 MAINTAINER Robert Hao <hypermind.cn@gmail.com>
 
+# Set timestamp
+ENV REFRESHED_AT 2015-01-19
+
+# Update them
+RUN  yum -q -y upgrade
+
 # Install base tools
 RUN yum -q -y install tar
 RUN yum -q -y install gzip
 
-# Install Golang1.3.3
+# Install Golang1.4.1
 RUN \
   mkdir -p /go && \
   curl https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz | tar xvzf - -C /go --strip-components=1
