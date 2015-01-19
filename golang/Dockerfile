@@ -14,7 +14,7 @@ RUN yum -q -y install gzip
 # Install Golang1.3.3
 RUN \
   mkdir -p /go && \
-  curl https://storage.googleapis.com/golang/go1.3.3.linux-amd64.tar.gz | tar xvzf - -C /go --strip-components=1
+  curl https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz | tar xvzf - -C /go --strip-components=1
 
 # Set environment variables.
 RUN \
