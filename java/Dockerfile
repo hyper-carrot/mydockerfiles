@@ -21,7 +21,7 @@ RUN yum -q -y install gzip
 ENV JAVA_HOME /jdk1.7.0
 RUN \
   mkdir -p $JAVA_HOME && \
-  wget -qO- --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u72-b14/jdk-7u72-linux-x64.tar.gz | tar xvzf - -C $JAVA_HOME --strip-components=1
+  wget -qO- --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u40-b26/jdk-8u40-linux-x64.tar.gz | tar xvzf - -C $JAVA_HOME --strip-components=1
 
 # Set environment
 ENV CLASSPATH .:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
